@@ -1,0 +1,12 @@
+language: php
+
+php:
+  - 7.0
+
+before_deploy:
+    - .travis/set-up-ssh.ssh
+deploy:
+  skip_cleanup: true
+  provider: script
+  on:
+    branch: master
