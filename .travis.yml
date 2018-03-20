@@ -3,8 +3,12 @@ language: php
 php:
   - 7.0
 
+install:
+  - composer self-update
+  - composer install
+
 script:
-  - vendor/bin/codecept run unit models
+  - php vendor/bin/codecept run unit models
 
 before_deploy:
   - .travis/set-up-ssh.sh
