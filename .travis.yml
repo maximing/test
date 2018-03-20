@@ -3,10 +3,14 @@ language: php
 php:
   - 7.0
 
+scripts:
+  - vendor/bin/codecept run unit models
+
 before_deploy:
-    - .travis/set-up-ssh.ssh
+  - .travis/set-up-ssh.sh
+
 deploy:
-  skip_cleanup: true
   provider: script
+  script: bash .travis/deploy.sh
   on:
     branch: master
