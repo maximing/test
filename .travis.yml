@@ -5,6 +5,7 @@ php:
 
 install:
   - composer self-update
+  - composer require --dev codeception/codeception
 
 script:
   - php vendor/bin/codecept run unit models
