@@ -27,7 +27,7 @@ addons:
 # INSTALL
 install:
   # Init Mysql
-  - mysql -u root <<< "CREATE DATABASE IF NOT EXISTS yii2advanced_test COLLATE utf8_unicode_ci CHARACTER SET utf8;"
+  - mysql -u root <<< "CREATE DATABASE IF NOT EXISTS test COLLATE utf8_unicode_ci CHARACTER SET utf8;"
 
   # composer
   - travis_retry composer self-update && composer --version
