@@ -18,6 +18,8 @@ cache:
 
 # ADDONS
 addons:
+  ssh_known_hosts:
+    - 79.137.75.144
   apt:
     sources:
       - mysql-5.7-trusty
